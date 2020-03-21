@@ -13,3 +13,4 @@
 #include "UiObject.h"
 #include "MousePointer.h"
 #include "StartScene.h"
+#include "Script.h"

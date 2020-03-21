@@ -1,12 +1,15 @@
 #pragma once
-#include"Collider.h"
-class script : public Collider
+#include "Component.h"
+class Script :	public Component
 {
 public:
-	script();
-	~script();
-	virtual void CollisionBegin(void* obj);
-	virtual void CollisionPreSolve(void* obj);
-	virtual void CollisionEnd(void* obj);
+	Script() {};
+	~Script() {};
+	//충돌한 직후
+	virtual void CollisionBegin(void* obj) {};
+	//충돌중
+	virtual void CollisionPreSolve(void* obj) {};
+	//충돌 끝난 시점
+	virtual void CollisionEnd(void* obj) {};
 };
 
