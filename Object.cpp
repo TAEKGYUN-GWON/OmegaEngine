@@ -125,22 +125,11 @@ void Object::SetIsRelese()
 {
 	if (_isActive)
 	{
-		if (GetComponent<PhysicsBody>())
-		{
-			//	auto p = GetComponent<PhysicsBody>();
-			//	p->SetBodyActive(false);
-
-		}
 		_parent->RemoveToActiveList(this);
 		_parent->RemoveChild(this);
 	}
 	else
 	{
-		if (GetComponent<PhysicsBody>())
-		{
-			//	auto p = GetComponent<PhysicsBody>();
-			//	p->SetBodyActive(false);
-		}
 		_parent->RemoveToDeActiveList(this);
 		_parent->RemoveChild(this);
 	}
