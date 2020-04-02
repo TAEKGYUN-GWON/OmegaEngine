@@ -6,6 +6,7 @@ T* Object::AddComponent()
     shared_ptr <Component> component = make_shared<T>();
 
     component->setGameObject(this);
+    component->Awake();
     component->Init();
     if (dynamic_cast<DrawComponent*>(component.get()))
         _draw.push_back((DrawComponent*)component.get());
@@ -47,6 +48,8 @@ T* Object::CreateObject(Object* parent)
         Obj->SetParent(sceneManager::GetInstance()->GetNowScene());
     else
         Obj->SetParent(parent);
+
+    Obj->Awake();
 
     return (T*)Obj;
 }

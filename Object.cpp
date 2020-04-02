@@ -112,6 +112,7 @@ void Object::SetIsActive(bool active)
 	{
 		_parent->RemoveToDeActiveList(this);
 		_parent->_activeList.push_back(this);
+		Init();
 	}
 	if (GetComponent<PhysicsBody>())
 	{

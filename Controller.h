@@ -8,7 +8,7 @@ private:
 private:
 	PhysicsBody* rb;
 public:
-	virtual void Init();
+	virtual void Awake();
 	virtual void Update();
 
 	virtual void CollisionBegin(void* obj);

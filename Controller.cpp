@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "Controller.h"
 
-void Controller::Init()
+void Controller::Awake()
 {
-	Script::Init();
+	Script::Awake();
 	rb = _object->GetComponent<PhysicsBody>();
 }
 

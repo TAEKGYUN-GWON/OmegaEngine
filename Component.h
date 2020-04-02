@@ -9,6 +9,7 @@ protected:
 	string _name;
 public:
 	virtual ~Component() {};
+	virtual void Awake() {};
 	virtual void Init() {};
 	virtual void Update() {};
 	virtual void Release() { };

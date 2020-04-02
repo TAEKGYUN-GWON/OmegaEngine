@@ -28,6 +28,7 @@ protected:
     vector<Object*> _activeList;
     vector<Object*> _deActiveList;
 
+    virtual void Awake() {}
 public:
     virtual ~Object() {};
     virtual void Init();

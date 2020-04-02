@@ -7,8 +7,8 @@ void StartScene::Init()
 	Object* obj = Object::CreateObject<Object>();
 	obj->GetTrans()->SetPos(WINSIZE / 2);
 	obj->GetTrans()->SetScale(100, 100);
-	obj->AddComponent<Controller>();
 	obj->AddComponent<PhysicsBody>()->Init(BodyType::DYNAMIC, 1);
+	obj->AddComponent<Controller>();
 	obj->AddComponent<Sprite>();
 	obj->GetComponent<Sprite>()->SetPosition(obj->GetTrans()->GetPos());
 
