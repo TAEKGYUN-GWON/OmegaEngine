@@ -8,6 +8,7 @@ protected:
 	Object* _object;
 	string _name;
 public:
+	virtual ~Component() {};
 	virtual void Init() {};
 	virtual void Update() {};
 	virtual void Release() { };

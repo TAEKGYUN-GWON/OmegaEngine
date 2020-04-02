@@ -67,6 +67,9 @@
     <Filter Include="playGround\Start">
       <UniqueIdentifier>{eb590bc1-fe02-44c7-94ab-2d1c79b55705}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\Scripts">
+      <UniqueIdentifier>{10167b65-b231-4152-8e96-374d750026f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -220,7 +223,10 @@
       <Filter>2DGameFramework\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Script.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>2DGameFramework\Object\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>playGround\Scripts</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -344,11 +350,14 @@
     <ClCompile Include="timeManager.cpp">
       <Filter>2DGameFramework\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="Script.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="randomFunction.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Script.cpp">
+      <Filter>2DGameFramework\Object\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>playGround\Scripts</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

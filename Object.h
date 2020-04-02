@@ -29,7 +29,7 @@ protected:
     vector<Object*> _deActiveList;
 
 public:
-    ~Object() {};
+    virtual ~Object() {};
     virtual void Init();
     virtual void Update();
     virtual void Release();

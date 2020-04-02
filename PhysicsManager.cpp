@@ -29,10 +29,8 @@ void PhysicsManager::BeginContact(b2Contact * contacts)
 	//cout << "충돌" << endl;
 	if (!a || !b) return;
 
-	for (auto s : a->GetComponents<Collider>())
-		s->CollisionBegin(b);
-	for (auto s : b->GetComponents<Collider>())
-		s->CollisionBegin(a);
+	a->GetComponent<Collider>()->CollisionBegin(b);
+	b->GetComponent<Collider>()->CollisionBegin(a);
 
 }
 
@@ -40,13 +38,11 @@ void PhysicsManager::PreSolve(b2Contact * contacts, const b2Manifold * oldManifo
 {
 	auto a = (Object*)contacts->GetFixtureA()->GetBody()->GetUserData();
 	auto b = (Object*)contacts->GetFixtureB()->GetBody()->GetUserData();
-
+	//cout << "충돌" << endl;
 	if (!a || !b) return;
 
-	for (auto s : a->GetComponents<Collider>())
-		s->CollisionPreSolve(b);
-	for (auto s : b->GetComponents<Collider>())
-		s->CollisionPreSolve(a);
+	a->GetComponent<Collider>()->CollisionBegin(b);
+	b->GetComponent<Collider>()->CollisionBegin(a);
 }
 
 void PhysicsManager::EndContact(b2Contact * contacts)
@@ -56,8 +52,6 @@ void PhysicsManager::EndContact(b2Contact * contacts)
 	//cout << "충돌" << endl;
 	if (!a || !b) return;
 
-	for (auto s : a->GetComponents<Collider>())
-		s->CollisionEnd(b);
-	for (auto s : b->GetComponents<Collider>())
-		s->CollisionEnd(a);
+	a->GetComponent<Collider>()->CollisionBegin(b);
+	b->GetComponent<Collider>()->CollisionBegin(a);
 }

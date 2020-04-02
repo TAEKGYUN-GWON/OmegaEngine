@@ -53,6 +53,7 @@ public:
 	float operator|(const Vector2& to) const;
 	float operator^(const Vector2& to) const;
 
+
 	Vector2 operator+(Vector2 to);
 	Vector2 operator*(Vector2 to);
 	Vector2 operator/(Vector2 to);

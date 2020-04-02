@@ -2,9 +2,10 @@
 #include "Component.h"
 class Script :	public Component
 {
+protected:
+	Transform* transform;
 public:
-	Script() {};
-	~Script() {};
+	virtual void Init() { transform = _object->GetTrans(); }
 	//충돌한 직후
 	virtual void CollisionBegin(void* obj) {};
 	//충돌중

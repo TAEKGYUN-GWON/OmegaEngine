@@ -7,6 +7,7 @@
 Object::Object()
 {
 	_trans = AddComponent<Transform>();
+	AddComponent<Collider>();
 }
 
 void Object::Init()

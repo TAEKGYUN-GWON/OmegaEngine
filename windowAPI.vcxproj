@@ -153,6 +153,7 @@
     <ClInclude Include="Collider.h" />
     <ClInclude Include="commonMacroFunction.h" />
     <ClInclude Include="Component.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="Direct2D.h" />
     <ClInclude Include="DrawComponent.h" />
     <ClInclude Include="iniDataManager.h" />
@@ -205,6 +206,7 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Direct2D.cpp" />
     <ClCompile Include="DrawComponent.cpp" />
     <ClCompile Include="iniDataManager.cpp" />
