@@ -1,14 +1,15 @@
 #pragma once
-#include "singletonBase.h"
 #include <time.h>
 
-class randomFunction : public singletonBase<randomFunction>
+class randomFunction 
 {
-public:
+private:
 	randomFunction()
 	{
 		srand(GetTickCount());
 	}
+public:
+	static randomFunction* GetInstance();
 	~randomFunction()
 	{
 

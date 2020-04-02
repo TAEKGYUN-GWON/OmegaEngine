@@ -1,16 +1,15 @@
 #pragma once
-#include "singletonBase.h"
 #include "timer.h"
 
-class timeManager : public singletonBase <timeManager>
+class timeManager
 {
 private:
 	timer* _timer;
+	timeManager();
 
 public:
-	timeManager();
 	~timeManager();
-
+	static timeManager* GetInstance();
 	HRESULT init();
 	void release();
 	void update(float lockFPS = 0.0f);

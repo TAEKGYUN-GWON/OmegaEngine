@@ -12,6 +12,13 @@ timeManager::~timeManager()
 {
 }
 
+timeManager* timeManager::GetInstance()
+{
+	static timeManager* instance = new timeManager();
+
+	return instance;
+}
+
 HRESULT timeManager::init()
 {
 	_timer = new timer;

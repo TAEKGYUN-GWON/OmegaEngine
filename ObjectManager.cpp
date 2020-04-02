@@ -12,6 +12,13 @@ ObjectManager::~ObjectManager()
 {
 }
 
+ObjectManager* ObjectManager::GetInstance()
+{
+	static ObjectManager* instance = new ObjectManager();
+
+	return instance;
+}
+
 HRESULT ObjectManager::Init()
 {
 	return S_OK;

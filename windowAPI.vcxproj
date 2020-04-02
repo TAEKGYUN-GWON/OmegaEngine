@@ -156,7 +156,6 @@
     <ClInclude Include="Direct2D.h" />
     <ClInclude Include="DrawComponent.h" />
     <ClInclude Include="iniDataManager.h" />
-    <ClInclude Include="JsonManager.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="MousePointer.h" />
     <ClInclude Include="omega.h" />
@@ -167,6 +166,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="Script.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="GraphicsManager.h" />
     <ClInclude Include="keyManager.h" />
@@ -208,15 +208,16 @@
     <ClCompile Include="Direct2D.cpp" />
     <ClCompile Include="DrawComponent.cpp" />
     <ClCompile Include="iniDataManager.cpp" />
-    <ClCompile Include="JsonManager.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="MousePointer.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleManager.cpp" />
     <ClCompile Include="ProgressBar.cpp" />
+    <ClCompile Include="randomFunction.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="Script.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="GraphicsManager.cpp" />
     <ClCompile Include="keyManager.cpp" />

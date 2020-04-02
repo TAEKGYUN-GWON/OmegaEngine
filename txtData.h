@@ -1,13 +1,13 @@
 #pragma once
-#include "singletonBase.h"
 #include <vector>
 
-class txtData : public singletonBase<txtData>
+class txtData 
 {
-public:
+private:
 	txtData();
+public:
 	~txtData();
-
+	static txtData* GetInstance();
 	HRESULT init();
 	void release();
 

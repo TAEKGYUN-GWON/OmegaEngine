@@ -14,6 +14,13 @@ BoxWorldManager::~BoxWorldManager()
 
 }
 
+BoxWorldManager* BoxWorldManager::GetInstance()
+{
+	static BoxWorldManager* instance = new BoxWorldManager();
+
+	return instance;
+}
+
 void BoxWorldManager::Release()
 {
 	SAFE_DELETE(_world);

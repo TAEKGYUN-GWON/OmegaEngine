@@ -11,10 +11,17 @@ sceneManager::~sceneManager()
 {
 }
 
+sceneManager* sceneManager::GetInstance()
+{
+	static sceneManager* instance = new sceneManager();
+	return instance;
+}
+
 Scene* sceneManager::_currentScene = NULL;
 
 HRESULT sceneManager::init()
 {
+
 	if (!_isFirstInit) return S_OK;
 	addScene("PG", new StartScene);
 	changeScene("PG");

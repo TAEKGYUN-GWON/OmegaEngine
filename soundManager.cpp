@@ -27,6 +27,13 @@ soundManager::~soundManager()
 {
 }
 
+soundManager* soundManager::GetInstance()
+{
+	static soundManager* instance = new soundManager();
+
+	return instance;
+}
+
 HRESULT soundManager::init()
 {
 	return S_OK;

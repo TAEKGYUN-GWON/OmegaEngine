@@ -74,19 +74,19 @@ using namespace SEVENTEEN_UTIL;
 #include "ObjectManager.h"
 #include "MousePointer.h"
 
-#define RND randomFunction::getSingleton()
-#define KEYMANAGER keyManager::getSingleton()
-#define TIMEMANAGER timeManager::getSingleton()
-#define TXTDATA txtData::getSingleton()
-#define SOUNDMANAGER soundManager::getSingleton()
-#define SCENEMANAGER sceneManager::getSingleton()
-#define BOXWORLDMANAGER BoxWorldManager::getSingleton()
+#define RND randomFunction::GetInstance()
+#define KEYMANAGER keyManager::GetInstance()
+#define TIMEMANAGER timeManager::GetInstance()
+#define TXTDATA txtData::GetInstance()
+#define SOUNDMANAGER soundManager::GetInstance()
+#define SCENEMANAGER sceneManager::GetInstance()
+#define BOXWORLDMANAGER BoxWorldManager::GetInstance()
 #define PHYSICSMANAGER PhysicsManager::GetInstance()
-#define GRAPHICMANAGER GraphicsManager::getSingleton()
-#define CAMERA Camera::getSingleton()
-#define OBJECTMANAGER ObjectManager::getSingleton()
-#define INIDATAMANAGER iniDataManager::getSingleton()
-#define MOUSEPOINTER MousePointer::getSingleton()
+#define GRAPHICMANAGER GraphicsManager::GetInstance()
+#define CAMERA Camera::GetInstance()
+#define OBJECTMANAGER ObjectManager::GetInstance()
+#define INIDATAMANAGER iniDataManager::GetInstance()
+#define MOUSEPOINTER MousePointer::GetInstance()
 
 
 #define SAFE_DELETE(p) {if(p) {delete(p); (p)=NULL;}}

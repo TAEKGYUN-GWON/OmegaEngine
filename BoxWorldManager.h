@@ -1,11 +1,14 @@
 #pragma once
-class BoxWorldManager : public singletonBase<BoxWorldManager>
+class BoxWorldManager
 {
 private:
 	b2World* _world;
-public:
 	BoxWorldManager();
+public:
 	~BoxWorldManager();
+
+	static BoxWorldManager* GetInstance();
+
 	virtual void Release();
 	void CreateWorld(b2Vec2 gravity = b2Vec2_zero);
 	void RemoveBody(b2Body* body);

@@ -2,6 +2,13 @@
 #include "Camera.h"
 #include <math.h>
 
+Camera* Camera::GetInstance()
+{
+	static Camera* instance = new Camera();
+
+	return instance;
+}
+
 HRESULT Camera::init()
 {
 

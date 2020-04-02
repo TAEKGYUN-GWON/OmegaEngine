@@ -22,6 +22,13 @@ void iniDataManager::release()
 
 }
 
+iniDataManager* iniDataManager::GetInstance()
+{
+	static iniDataManager* instance = new iniDataManager();
+
+	return instance;
+}
+
 
 void iniDataManager::addData(const char* subject, const char* title, const char* body)
 {

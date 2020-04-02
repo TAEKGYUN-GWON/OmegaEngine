@@ -1,6 +1,13 @@
 #include "stdafx.h"
 #include "GraphicsManager.h"
 
+GraphicsManager* GraphicsManager::GetInstance()
+{
+	static GraphicsManager* instance = new GraphicsManager();
+
+	return instance;
+}
+
 HRESULT GraphicsManager::init()
 {
 	HRESULT hr = D2D1CreateFactory(D2D1_FACTORY_TYPE_SINGLE_THREADED, &_d2dFactory);

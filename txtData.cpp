@@ -11,6 +11,13 @@ txtData::~txtData()
 {
 }
 
+txtData* txtData::GetInstance()
+{
+	static txtData* instance = new txtData();
+
+	return instance;
+}
+
 HRESULT txtData::init()
 {
 

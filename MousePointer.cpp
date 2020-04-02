@@ -2,6 +2,12 @@
 #include "MousePointer.h"
 
 
+MousePointer* MousePointer::GetInstance()
+{
+	static MousePointer* instance = new MousePointer();
+	return instance;
+}
+
 Vector2 MousePointer::GetMouseWorldPositionForDesignResolution()
 {
 	_pos = _ptMouse;

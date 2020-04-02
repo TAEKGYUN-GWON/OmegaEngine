@@ -4,7 +4,7 @@
 #define ZOOM_MIN 0.01f
 #define ZOOM_MAX 2.5f
 
-class Camera :public singletonBase<Camera>
+class Camera
 {
 private:
 	Vector2				_shakeUpPos;
@@ -45,8 +45,6 @@ private:
 private:
 
 	void ShakingCamera();
-
-public:
 	Camera()
 	{
 		//_scaleMatrix = Matrix3x2F::Identity();
@@ -73,8 +71,8 @@ public:
 		_isMoving = false;
 		_isShaking = false;
 	};
-	~Camera() {};
-
+public:
+	static Camera* GetInstance();
 	HRESULT init();
 	void Update();
 	void Control();

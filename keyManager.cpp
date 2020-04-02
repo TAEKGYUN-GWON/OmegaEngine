@@ -9,6 +9,13 @@ keyManager::~keyManager()
 {
 }
 
+keyManager* keyManager::GetInstance()
+{
+	static keyManager* instance = new keyManager();
+
+	return instance;
+}
+
 HRESULT keyManager::init()
 {
 	for (int i = 0; i < KEYMAX; i++)

@@ -1,5 +1,4 @@
 #pragma once
-#include "singletonBase.h"
 #include <map>
 
 #include "inc/fmod.hpp"
@@ -12,7 +11,7 @@ using namespace FMOD;
 
 #define TOTALSOUNDBUFFER SOUNDBUFFER + EXTRACHANNELBUFFER
 
-class soundManager : public singletonBase<soundManager>
+class soundManager
 {
 private:
 	typedef map<string, Sound**>			arrSounds;
@@ -28,10 +27,10 @@ private:
 
 	arrSounds _mTotalSounds;
 	arrChannels _mTotalChannels;
-public:
 	soundManager();
+public:
 	~soundManager();
-
+	static soundManager* GetInstance();
 	HRESULT init();
 	void release();
 	void update();
