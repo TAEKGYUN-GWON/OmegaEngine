@@ -41,8 +41,8 @@ void PhysicsManager::PreSolve(b2Contact * contacts, const b2Manifold * oldManifo
 	//cout << "충돌" << endl;
 	if (!a || !b) return;
 
-	a->GetComponent<Collider>()->CollisionBegin(b);
-	b->GetComponent<Collider>()->CollisionBegin(a);
+	a->GetComponent<Collider>()->CollisionStay(b);
+	b->GetComponent<Collider>()->CollisionStay(a);
 }
 
 void PhysicsManager::EndContact(b2Contact * contacts)
@@ -52,6 +52,6 @@ void PhysicsManager::EndContact(b2Contact * contacts)
 	//cout << "충돌" << endl;
 	if (!a || !b) return;
 
-	a->GetComponent<Collider>()->CollisionBegin(b);
-	b->GetComponent<Collider>()->CollisionBegin(a);
+	a->GetComponent<Collider>()->CollisionEnd(b);
+	b->GetComponent<Collider>()->CollisionEnd(a);
 }

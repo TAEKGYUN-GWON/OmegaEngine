@@ -18,10 +18,10 @@ void Collider::CollisionBegin(void* obj)
 		s->CollisionBegin(obj);
 }
 
-void Collider::CollisionPreSolve(void* obj)
+void Collider::CollisionStay(void* obj)
 {
 	for (auto s : _object->GetComponents<Script>())
-		s->CollisionPreSolve(obj);
+		s->CollisionStay(obj);
 }
 
 void Collider::CollisionEnd(void* obj)
