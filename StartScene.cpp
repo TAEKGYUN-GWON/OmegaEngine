@@ -3,6 +3,7 @@
 #include "Controller.h"
 void StartScene::Init()
 {
+	//F2를 누르면 디버그 드로우 렉트가 그려짐
 	Scene::Init();
 	Object* obj = Object::CreateObject<Object>();
 	obj->GetTrans()->SetPos(WINSIZE / 2);
