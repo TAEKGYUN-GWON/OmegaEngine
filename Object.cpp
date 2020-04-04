@@ -21,7 +21,17 @@ void Object::Init()
 	_allowInit = false;
 }
 
-void Object::Update()
+void Object::FixedUpdate()
+{
+	for (int i = 0; i < _components.size(); i++)
+		_components[i]->FixedUpdate();
+	for (Object* child : _activeList)
+	{
+		child->FixedUpdate();
+	}
+}
+
+void Object::RemoveUpdate()
 {
 	for (Object* c : _removeList)
 	{
@@ -34,7 +44,10 @@ void Object::Update()
 	}
 	if (_removeList.size())
 		_removeList.clear();
+}
 
+void Object::Update()
+{
 	for (int i = 0; i < _components.size(); i++)
 		_components[i]->Update();
 
@@ -44,6 +57,16 @@ void Object::Update()
 		child->Update();
 	}
 
+}
+
+void Object::LateUpdate()
+{
+	for (int i = 0; i < _components.size(); i++)
+		_components[i]->LateUpdate();
+	for (Object* child : _activeList)
+	{
+		child->LateUpdate();
+	}
 }
 
 void Object::Release()
