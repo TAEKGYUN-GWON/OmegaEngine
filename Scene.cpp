@@ -58,10 +58,10 @@ void Scene::Release()
 	Object::Release();
 }
 
-void Scene::Update()
-{
-	Object::Update();
-}
+//void Scene::Update()
+//{
+//	Object::Update();
+//}
 
 void Scene::PhysicsUpdate()
 {

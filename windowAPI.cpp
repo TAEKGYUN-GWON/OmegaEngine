@@ -76,11 +76,11 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd
 		else
 		{
 			TIMEMANAGER->update(60.0f);
+			sceneManager::GetInstance()->GetNowScene()->RemoveUpdate();
 			sceneManager::GetInstance()->GetNowScene()->FixedUpdate();
 			sceneManager::GetInstance()->GetNowScene()->PhysicsUpdate();
 			sceneManager::GetInstance()->GetNowScene()->Update();
 			sceneManager::GetInstance()->GetNowScene()->LateUpdate();
-			sceneManager::GetInstance()->GetNowScene()->RemoveUpdate();
 			CAMERA->Update();
 			SOUNDMANAGER->update();
 			ID2D1RenderTarget* renderTarget = GRAPHICMANAGER->GetRenderTarget();

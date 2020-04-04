@@ -44,6 +44,11 @@ void Object::RemoveUpdate()
 	}
 	if (_removeList.size())
 		_removeList.clear();
+
+	for (Object* child : _activeList)
+	{
+		child->RemoveUpdate();
+	}
 }
 
 void Object::Update()

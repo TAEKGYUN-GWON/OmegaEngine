@@ -20,7 +20,7 @@ public:
 
 	virtual void Init();			//초기화 전용 함수
 	virtual void Release();			//메모리 해제 함수
-	virtual void Update();			//연산 전용 함수
+	//virtual void Update();			//연산 전용 함수
 	virtual void PhysicsUpdate();			//연산 전용 함수
 	virtual void Render();
 

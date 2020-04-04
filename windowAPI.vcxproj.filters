@@ -70,6 +70,9 @@
     <Filter Include="playGround\Scripts">
       <UniqueIdentifier>{10167b65-b231-4152-8e96-374d750026f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\Objects">
+      <UniqueIdentifier>{a46d692d-ffa6-445c-b3ec-31281e7bd432}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
