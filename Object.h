@@ -33,9 +33,9 @@ public:
     virtual ~Object() {};
     virtual void Init();
     virtual void FixedUpdate();
-    virtual void RemoveUpdate();
+    virtual void RemoveUpdate() final;
     virtual void Update();
-    virtual void LateUpdate() final;
+    virtual void LateUpdate() ;
     virtual void Release();
     virtual void Render();
 
